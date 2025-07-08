@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TopControls from './TopControls';
 
 class App extends Component {
   render() {
@@ -7,7 +8,7 @@ class App extends Component {
         <h1 className="text-3xl">
           React project setup. Class components. Error boundary.
         </h1>
-        <p>text</p>
+        <TopControls />
       </div>
     );
   }
