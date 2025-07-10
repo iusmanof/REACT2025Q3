@@ -9,12 +9,22 @@ interface SearchFormState {
 }
 
 class TopControls extends Component<SearchFormProps, SearchFormState> {
+  constructor(props){
+    super(props)
+    const savedQueryPokemon = localStorage.getItem("savedQueryPokemon") || '';
+    this.state = {
+      q: savedQueryPokemon,
+    }
+  }
+
   state: SearchFormState = {
     q: '',
   };
 
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ q: e.target.value });
+    const newETargetVal = e.target.value; 
+    this.setState({ q: newETargetVal });
+    localStorage.setItem("savedQueryPokemon", newETargetVal);
   };
 
   handleSubmit = (e: FormEvent) => {

@@ -14,10 +14,10 @@ class Result extends Component<ResultProps> {
 
     if (pokemonData.results) {
       return (
-        <div>
+        <div className='max-w-md mx-auto p-4'>
           <ul>
             {pokemonData.results.map((pokemon: any) => (
-              <li key={pokemon.name}>{pokemon.name}</li>
+              <li key={pokemon.name}>{pokemon.name}<a href={pokemon.url}>{pokemon.name}</a></li>
             ))}
           </ul>
         </div>

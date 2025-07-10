@@ -13,3 +13,7 @@ https://www.youtube.com/watch?v=0lvKcqP3aP0
 
 git checkout -b new-branch
 [pull request] new-branch -> main
+
+
+npm install -D tailwindcss postcss autoprefixer postcss-loader
+npx tailwindcss init -p

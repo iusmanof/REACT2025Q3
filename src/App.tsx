@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import TopControls from './TopControls';
 import Result from './Result';
 
+interface PokemonListItem {
+  name: string
+  url: string
+}
+
+interface PokemonResponse {
+  count: number,
+  next: string,
+  previous: string,
+  results: PokemonListItem[]
+}
+
 type StateType = {
-  pokemonData: any | null;
+  pokemonData: PokemonResponse | null;
   loading: boolean;
   error: string | null;
 };
