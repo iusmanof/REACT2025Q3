@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+dist/
+
+npm-debug.log*
+
+.vscode/
+
+.env
+.env.local
+.env.*.local
+
+.husky/_/
+
+coverage/
+
+.cache/
+
+.prettierlog
+.eslintcache
